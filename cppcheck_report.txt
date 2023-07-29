@@ -1,0 +1,50 @@
+examples/avr_misc/avr_misc.c:81:36: warning: Logical conjunction always evaluates to false: pin < 2 && pin > 7. [incorrectLogicOperator]
+ if ((*port == PORTD) && (pin < 2) && (pin > 7)) {
+                                   ^
+examples/avr_misc/avr_misc.c:121:9: style: The scope of the variable 'pin' can be reduced. [variableScope]
+    int pin = 0;
+        ^
+examples/unix_misc/unix_misc.c:118:13: style: Local variable 'i' shadows outer variable [shadowVariable]
+   for (int i = 0; i < _NUM_OF_CMD; i++) {
+            ^
+examples/unix_misc/unix_misc.c:83:6: note: Shadowed declaration
+ int i = 0;
+     ^
+examples/unix_misc/unix_misc.c:118:13: note: Shadow variable
+   for (int i = 0; i < _NUM_OF_CMD; i++) {
+            ^
+src/microrl.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 13 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/microrl.c:195:26: style: Array index 'ind' is used before limits check. [arrayIndexThenCheck]
+  while ((pThis->cmdline [ind] == '\0') && (ind < limit)) {
+                         ^
+src/microrl.c:204:26: style: Array index 'ind' is used before limits check. [arrayIndexThenCheck]
+  while ((pThis->cmdline [ind] != '\0') && (ind < limit)) {
+                         ^
+src/microrl.c:433:6: style: The scope of the variable 'i' can be reduced. [variableScope]
+ int i;
+     ^
+src/microrl.c:506:7: style: The scope of the variable 'i' can be reduced. [variableScope]
+  int i = 0;
+      ^
+src/microrl.c:127:8: style: Local variable 'header' shadows outer variable [shadowVariable]
+   int header = pThis->begin;
+       ^
+src/microrl.c:117:6: note: Shadowed declaration
+ int header = pThis->begin;
+     ^
+src/microrl.c:127:8: note: Shadow variable
+   int header = pThis->begin;
+       ^
+src/microrl.c:154:8: style: Local variable 'header' shadows outer variable [shadowVariable]
+   int header = pThis->begin;
+       ^
+src/microrl.c:117:6: note: Shadowed declaration
+ int header = pThis->begin;
+     ^
+src/microrl.c:154:8: note: Shadow variable
+   int header = pThis->begin;
+       ^
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingIncludeSystem]
+
